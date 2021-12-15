@@ -1,1 +1,29 @@
-<p>informe-producto works!</p>
+<a routerLink="/producto/crearProducto" class="btn">Nuevo Producto</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Tipo</th>
+            <th>Proveedor</th>
+            <th>Departamento</th>
+            <th>Ciudad</th>
+            <th>Precio</th>
+            <th>Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td> {{p.nombre}} </td>
+            <td> {{p.descripcion}} </td>
+            <td> {{p.tipo}} </td>
+            <td> {{p.proveedor}} </td>
+            <td> {{p.departamento}} </td>
+            <td> {{p.ciudad}} </td>
+            <td> {{p.precio}} </td>
+            <td> <a routerLink="/producto/editarProducto/{{p.id}}" class="btn">Editar Producto</a> </td>
+
+        </tr>
+    </tbody>
+</table>
+<br/><br/>
